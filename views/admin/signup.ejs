@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uhost</title>
+    <link rel="shortcut icon" href="favicon.jpg">
+    <link rel="stylesheet" href="../shared.css">
+    <link rel="stylesheet" href="../login.css">
+    <script src="../shared.js" defer></script>
+</head>
+<body>
+    <header class="main-header">
+        <button class="toggle-button">
+            <span class="toggle-button__line"></span>
+            <span class="toggle-button__line"></span>
+            <span class="toggle-button__line"></span>
+        </button>
+    <div class="mobile-nav">
+        <nav class="mobile-nav__items">
+            <a href="http://localhost:5500/admin/login" class="mobile-nav__item">Login</a>
+            <button class="mobile-nav__subscription"> <a href="../plan/index.html">Our Plans</a> </button>
+        </nav>
+    </div>
+    <a href="../main/index.html" class="logo">
+        <img src="../logoCompany.png" alt="WaterDrop" class="company-logo">
+    </a>
+    <nav class="main-nav">
+        <a href="http://localhost:5500/admin/login" class="main-nav__item">Login</a>
+        <button class="main-nav__subscription"> <a href="http://localhost:5500/main/index.html">Plans</a> </button>
+    </nav>
+</header>
+<section class="login">
+    <div class="login-image__container">
+        <img src="../logoCompany.png" alt="comp">
+        <h1 class="login-message">
+            Welc<img src="../1024px-Smiley.svg.png" alt="">me !
+        </h1>
+        <form action="http://localhost:5500/admin/signup" method="POST" class="login-form">
+            <label for="name">Name</label>
+            <input type="text" name="name">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+            <label for="password">password</label>
+            <input type="password" name="password" id="password">
+            <label for="confirmpass">Confirm password</label>
+            <input type="password" name="confirmpass">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <button type="submit">SignUp</button>
+        </form>
+    </div>
+</section>
+<footer class="footer">
+    <div class="footer-item">
+        <a href="#">ContactUs</a>
+        <a href="#">Support Us</a>
+        <a href="#">Give Feedback</a>
+    </div>
+</footer>
+
+</body>
+</html>

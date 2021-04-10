@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uhost</title>
+    <link rel="shortcut icon" href="favicon.jpg">
+    <link rel="stylesheet" href="../shared.css">
+    <link rel="stylesheet" href="../selectAdmin.css">
+</head>
+<body>
+    <header class="main-header">
+        <button class="toggle-button">
+            <span class="toggle-button__line"></span>
+            <span class="toggle-button__line"></span>
+            <span class="toggle-button__line"></span>
+        </button>
+    <div class="mobile-nav">
+        <nav class="mobile-nav__items">
+            <!-- <a href="../Login/index.html" class="mobile-nav__item">Logout</a> -->
+            <a href="http://localhost:5500/admin/edit-product?edit=true" class="mobile-nav__item">Edit Product</a>
+            <a href="http://localhost:5500/admin/add-product" class="mobile-nav__item">Add Product</a>
+            <button class="mobile-nav__subscription"> <a href="#">Delete Product</a> </button>
+        </nav>
+    </div>
+    <a href="../main/index.html" class="logo">
+        <img src="../logoCompany.png" alt="WaterDrop" class="company-logo">
+    </a>
+    <nav class="main-nav">
+        <form action="http://localhost:5500/admin/logout" method="POST">
+             <button type="submit">Logout</button>
+             <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+       </form>
+        <!-- <a href="http://localhost:5500/admin/logout" method="" class="main-nav__item">Logout</a> -->
+        <a href="http://localhost:5500/admin/edit-product?edit=true" class="main-nav__item">Edit Product</a>
+        <a href="#" class="main-nav__item">Delete Product</a>
+        <button class="main-nav__subscription"> <a href="http://localhost:5500/main/index.html">Change Plans</a> </button>
+    </nav>
+</header>
+  <section class="welcome-admin">
+      <h1 class="welcome-heading">Welcome ,Have a nice a day !</h1>
+      <form action="/admin/task" class="select-option">
+        <select class="select-option" name="adminTask">
+            <option value="addProduct">Add Product</option>
+            <option value="editProduct">Edit Product</option>
+            <option value="userDetails">Your User Data</option>
+        </select>
+         <button type="submit">Start Doing</button>
+    </form>
+
+  </section>
+</body>
+</html>

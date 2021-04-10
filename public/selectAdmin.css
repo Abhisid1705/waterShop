@@ -1,0 +1,13 @@
+.welcome-admin{
+    margin-top: 15rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+}
+.select-option{
+    display: block;
+    margin-bottom: 2rem;
+}

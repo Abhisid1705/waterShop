@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uhost</title>
+    <link rel="shortcut icon" href="favicon.jpg">
+    <link rel="stylesheet" href="../form.css">
+    <link rel="stylesheet" href="../shared.css">
+    <script src="../shared.js" defer></script>
+</head>
+<body>
+    <header class="main-header">
+            <button class="toggle-button">
+                <span class="toggle-button__line"></span>
+                <span class="toggle-button__line"></span>
+                <span class="toggle-button__line"></span>
+            </button>
+        <div class="mobile-nav">
+            <nav class="mobile-nav__items">
+                <form action="http://localhost:5500/admin/logout" method="POST">
+                    <button type="submit">Logout</button>
+                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+              </form>
+                <button class="mobile-nav__subscription"> <a href="../plan/index.html">Our Plans</a> </button>
+            </nav>
+        </div>
+        <a href="index.html" class="logo">
+            <img src="../images/logoCompany.png" alt="WaterDrop" class="company-logo">
+        </a>
+        <nav class="main-nav">
+            <form action="http://localhost:5500/admin/logout" method="POST">
+                <button type="submit">Logout</button>
+                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+          </form>
+            <button class="main-nav__subscription"> <a href="../plan/index.html">Our Plans</a> </button>
+        </nav>
+    </header>
+    <div class="add-product__form">
+        <form action="http://localhost:5500/admin/<% if (editing) { %>edit-product<% } else { %>add-product<% } %>" method="POST" class="form" enctype="multipart/form-data">
+            <div class="form-control">
+                <label for="name">Title</label>
+                <input type="text"  name="title" value="<% if (editing) { %><%= product.title %><% } %>">
+            </div>
+            <div class="form-control">
+                <label for="image">Image</label>
+                <input type="file" name="image" id="image">
+            </div>
+           <div class="form-control">
+            <label for="price">Price</label>
+            <input type="number" name="price" id="price"  value="<% if (editing) { %><%= product.price %><% } %>">
+           </div>
+           <div class="form-control">
+               <label for="description">Description</label>
+                <textarea name="description" cols="30" rows="10" id="description" value="<% if (editing) { %><%= product.description %><% } %>"></textarea>
+           </div>
+           <% if (editing) { %>
+            <input type="hidden" value="<%= product._id %>" name="productId">
+            <% } %>
+           <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <button type="submit"><% if(editing){%>Update Product <%} else{%> Add Product <%} %></button>
+        </form>
+    </div>
+</body>
+</html>

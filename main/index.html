@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uhost</title>
+    <link rel="shortcut icon" href="favicon.jpg">
+    <link rel="stylesheet" href="../shared.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="../shared.js" defer></script>
+</head>
+<body>
+    <header class="main-header">
+            <button class="toggle-button">
+                <span class="toggle-button__line"></span>
+                <span class="toggle-button__line"></span>
+                <span class="toggle-button__line"></span>
+            </button>
+        <div class="mobile-nav">
+            <nav class="mobile-nav__items">
+                <a href="../Login/index.html" class="mobile-nav__item">Login</a>
+                <a href="#" class="mobile-nav__item">SignUp</a>
+                <a href="#" class="mobile-nav__item">Admin</a>
+                <button class="mobile-nav__subscription"> <a href="../plan/index.html">Our Plans</a> </button>
+            </nav>
+        </div>
+        <a href="index.html" class="logo">
+            <img src="../images/logoCompany.png" alt="WaterDrop" class="company-logo">
+        </a>
+        <nav class="main-nav">
+            <a href="../Login/index.html" class="main-nav__item">Login</a>
+            <a href="#" class="main-nav__item">SignUp</a>
+            <a href="#" class="main-nav__item">Admin</a>
+            <button class="main-nav__subscription"> <a href="../plan/index.html">Our Plans</a> </button>
+        </nav>
+    </header>
+    <section class="about-us">
+        <h1 class="about-us__heading">Why Us?</h1>
+        <p class="about-us__paragraph">Because We belive <b>Water</b>cycle and the <b>Life</b>cycle are one ! </p>
+        <div class="about-us__explanation">
+            <p>
+                Water is important because it is essential to life on earth. 
+                Humans can only live three days without water, though it is possible to live weeks without food. 
+                Water is especially valuable for human health, medicine, agriculture and industry.
+            </p>
+        </div>
+    </section>
+    <section class="enquiry">
+        <h1 class="enquire-heading">We will love to know from you</h1>
+        <form action="http://localhost:5500/" class="enquiry-form">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+            <label for="contact">Mobile-Number</label>
+            <input type="number" name="contact" id="contact">
+            <label for="description" name="description">Your Enquiry</label>
+            <textarea name="description" id="description" rows="5"></textarea>
+            <button type="submit" class="enquiry-submission">Submit</button>
+        </form>
+    </section>
+    <footer class="footer">
+        <div class="footer-item">
+            <a href="#">ContactUs</a>
+            <a href="#">Support Us</a>
+            <a href="#">Give Feedback</a>
+        </div>
+    </footer>
+</body>
+</html>

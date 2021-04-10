@@ -1,0 +1,113 @@
+#product-overview{
+    /* background-color: red; */
+    padding:10px;
+    width:100vw;
+    height: 50vh;
+    background-image: linear-gradient(at top ,red 70%,blue,yellow,transparent);
+    background-image: url("../images/drink.jpg");
+    background-size:cover;
+    background-position: 50% 0.5%;
+    background-origin: border-box;
+    background-clip: border-box;
+    background-repeat:no-repeat ;
+    /* border: 5px dashed red; */
+    /* margin-top: 3.5rem; */
+    background-position: cover;
+    position: relative;
+}
+#product-overview h1{
+    /* Any h1 tag inside the element with id product-overview will get this style*/
+    font-family: 'Anton', sans-serif;
+    /* margin-top: 60px; */
+    color:white;
+    position: absolute;
+    bottom: 10%;
+    font-size: 1.6rem;
+}
+@media(min-width:40rem){
+    #product-overview{
+        height: 80vh;
+        background-size: cover;
+        background-position: 0 18%;
+    }
+    #product-overview h1{
+        font-size: 3rem;
+    }
+    
+}
+.section-title{
+    color:green;
+    text-align: center;
+}
+.plan{
+    background-color:#d5ffdc;
+    text-align: center;
+    padding: 1rem;
+    /* margin: 8px; */
+    width:100%;
+}
+.plan--highlighted{
+    background-color: green;
+    color:white;
+}
+.plan__annotation{
+    background-color: white;
+    color: green;
+    border-radius: 10px;
+    padding:1.2rem;
+    width:100%;
+    box-shadow: -2px 2px 2px 2px rgba(0,0,0,0.5);
+    border-radius: 18px;
+
+}
+.plan__features{
+    list-style: none;
+    margin: 0;
+    padding:0;
+}
+.plan__feature{
+    margin:8px 0;
+}
+.plan__title{
+    color:green;
+    font-weight: bold;
+
+}
+.plan__price{
+ color: grey;
+}
+.plan--highlighted .plan__price{
+    color:rgb(138, 228, 138);
+}
+.plan--highlighted .plan__title{
+    color:white;
+}
+
+@media(min-width:40rem) and (orientation:landscape) {
+    .plan__list{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5rem;
+        align-items: center;
+
+        /* text-align: center; */
+        }
+    .plan
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 30%;
+        min-width: 12.56rem;
+        max-width: 25rem;
+        margin: 0.5rem;
+        height:28rem;
+    }
+    
+    .plan--highlighted{
+        box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.5);
+        height: 30rem;
+        z-index: 50;
+    }

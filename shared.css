@@ -1,0 +1,160 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    /* background-image:linear-gradient(blue,transparent); */
+    margin:0;
+    position: relative;
+    z-index:-1
+}
+.main-header{
+    background-color:rgb(136, 216, 112);
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* bottom: 0; */
+    right: 0;
+    z-index: 1;
+
+    
+}
+.toggle-button{
+    width: 3rem;
+    background: transparent;
+    border:none;
+    cursor: pointer;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+@media(min-width:40rem){
+    .toggle-button{
+        display: none;
+
+    }
+}
+.toggle-button__line{
+    width:100%;
+    height: 0.1rem;
+    background-color: black;
+    display: block;
+    margin: 0.6rem 0;
+}
+.mobile-nav{
+    display: none;
+    width: 80%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    /* z-index: 5; */
+    background-color: white;
+}
+.mobile-nav__items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    margin-top: 8rem;
+/* display: block; */
+}
+.mobile-nav__item{
+    
+    padding: .5rem;
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.mobile-nav__subscription{
+    margin: 2rem;
+}
+.mobile-nav__subscription a{
+    text-decoration: none;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: #000;
+}
+.mobile-nav__item:hover,
+.mobile-nav__item:active{
+    text-decoration: underline;
+    color: red;
+    border: 1px solid green;
+    border-radius:25%;
+    margin: 0;
+}
+.logo{
+    text-align: center;
+}
+.logo img{
+    height: 2.5rem;
+    
+    /* vertical-align: middle; */
+}
+.main-nav__item{
+    display: none;
+    padding:0.8rem;
+    text-decoration: none;
+    font-weight: bold;
+    color:black;
+    font-family: Georgia,Arial, Helvetica, sans-serif
+
+}
+@media(min-width:40rem){
+    .main-nav__item{
+        display: inline-block;
+    }
+}
+.main-nav__subscription{
+    background-color:red;
+    height: 3rem;
+    border:2px solid blue;
+}
+.main-nav__subscription a{
+    font-weight: bold;
+    color:gold;
+    text-decoration: none;
+}
+.footer-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:black;
+    height: 5rem;
+    text-align: center;
+    flex-direction: column;
+}
+.footer a{
+    text-decoration: none;
+    margin: auto;
+    font-weight: bold;
+    
+}
+@media(min-width:40rem){
+ .footer-item{
+     flex-direction: row;
+     justify-content: center;
+ }
+ .footer-item a{
+     margin: 0;
+     padding: 2rem;
+ }
+}
+button:hover,
+button:active{
+    background-color: white;
+    cursor: pointer;
+}
+button:focus{
+    outline: none;
+}
+.open{
+    display: block;
+}
