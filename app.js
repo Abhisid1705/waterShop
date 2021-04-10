@@ -11,7 +11,7 @@ const csrf=require('csurf');
 const app=express();
 
 const store=new MongoDBStore({
-    uri:'mongodb+srv://abhi:9430259109@cluster0.mxivb.mongodb.net/waterShop',
+    uri:'own uri',
     collection:'sessions'
 })
 
@@ -57,7 +57,7 @@ app.use(adminRoutes);
 app.use(shopRoutes);
 
 mongoose.connect(
-    'mongodb+srv://abhi:9430259109@cluster0.mxivb.mongodb.net/waterShop?retryWrites=true&w=majority',
+    'own uri',
      {useNewUrlParser: true, useUnifiedTopology: true}
 
 ).then(result=>{
